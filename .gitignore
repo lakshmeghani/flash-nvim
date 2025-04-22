@@ -1,0 +1,40 @@
+# Plugin manager downloads
+# (like Lazy.nvim, Packer, etc. — they clone plugins here)
+site/
+pack/
+language-servers/
+lazy-lock.json
+
+# Session, undo, swap, backup files (if they ever end up here)
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+*.old
+*.un~
+
+# Node/JS stuff if used in config
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+dist/
+
+# LSP logs or temp files
+log/
+logs/
+*.log
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Build artifacts from compilers, treesitter parsers, etc.
+*.so
+*.out
+*.o
+
+# Python virtual environments if used
+.venv/
+__pycache__/
