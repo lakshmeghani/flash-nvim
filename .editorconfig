@@ -1,3 +1,138 @@
+# EditorConfig for Neovim
+# More info at https://editorconfig.org/
+
+# personal lua config
 [*.lua]
 indent_style = space
 indent_size = 2
+
+# mostly for other programming languages
+# add a bash alias to copy this from the
+# neovim config directory to your project root
+# !bash: alias edc="cp ~/.config/nvim/.editorconfig ."
+
+root = true
+
+# Default settings for all files
+[*]
+indent_style = space
+indent_size = 2
+tab_width = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# Python (PEP 8 - 4 spaces)
+[*.py]
+indent_size = 4
+tab_width = 4
+
+# JavaScript (2 spaces)
+[*.js]
+indent_size = 2
+tab_width = 2
+
+# TypeScript (2 spaces)
+[*.ts]
+indent_size = 2
+tab_width = 2
+
+# React (JSX/TSX - 2 spaces)
+[*.jsx]
+indent_size = 2
+tab_width = 2
+[*.tsx]
+indent_size = 2
+tab_width = 2
+
+# HTML (2 spaces)
+[*.html]
+indent_size = 2
+tab_width = 2
+
+# CSS (2 spaces)
+[*.css]
+indent_size = 2
+tab_width = 2
+
+# SCSS (2 spaces)
+[*.scss]
+indent_size = 2
+tab_width = 2
+
+# JSON (2 spaces)
+[*.json]
+indent_size = 2
+tab_width = 2
+
+# YAML (2 spaces)
+[*.yaml]
+indent_size = 2
+tab_width = 2
+
+# Markdown (2 spaces)
+[*.md]
+indent_size = 2
+tab_width = 2
+
+# Rust (4 spaces)
+[*.rs]
+indent_size = 4
+tab_width = 4
+
+# Go (Tabs for indentation)
+[*.go]
+indent_style = tab
+tab_width = 4
+
+# Java (4 spaces)
+[*.java]
+indent_size = 4
+tab_width = 4
+
+# C, C++, and Objective-C (4 spaces)
+[*.c]
+indent_size = 4
+tab_width = 4
+[*.cpp]
+indent_size = 4
+tab_width = 4
+[*.h]
+indent_size = 4
+tab_width = 4
+
+# Swift (4 spaces)
+[*.swift]
+indent_size = 4
+tab_width = 4
+
+# PHP (4 spaces)
+[*.php]
+indent_size = 4
+tab_width = 4
+
+# Ruby (2 spaces)
+[*.rb]
+indent_size = 2
+tab_width = 2
+
+# Django templates (HTML with 2 spaces)
+[*.html.jinja]
+indent_size = 2
+tab_width = 2
+
+# Shell script (2 spaces)
+[*.sh]
+indent_size = 2
+tab_width = 2
+
+# SQL (4 spaces)
+[*.sql]
+indent_size = 4
+tab_width = 4
+
+# LaTeX (2 spaces)
+[*.tex]
+indent_size = 2
+tab_width = 2
