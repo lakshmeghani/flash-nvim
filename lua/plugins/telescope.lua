@@ -13,6 +13,32 @@ return {
     },
     config = function()
       require('telescope').setup {
+        -- adding file-ignore-paths:
+        defaults = {
+          file_ignore_patterns = {
+            "^./%.git/",
+            "^node_modules/",
+            "^./%.env", -- optional
+            "^./%.cache",
+          },
+          mappings = {
+            -- defining a keymap for opening a telescope chosen buffer as a new tab
+            i = {                                                                      -- this is for the insert mode
+              ["<C-t>"] = function(prompt_buffer)
+                local entry = require("telescope.actions.state").get_selected_entry()  -- getting selected file
+                require("telescope.actions").close(prompt_buffer)                      -- closing the telescope floating window
+                vim.cmd("tabnew" .. entry.path)
+              end
+            },
+            n = {
+              ["<C-t>"] = function(prompt_buffer)
+                local entry = require("telescope.actions.state").get_selected_entry()  -- getting selected file
+                require("telescope.actions").close(prompt_buffer)                      -- closing the telescope floating window
+                vim.cmd("tabnew" .. entry.path)
+              end
+            },
+          },
+        },
         -- Adding fzf in extensions
         extensions = {
           fzf = {}

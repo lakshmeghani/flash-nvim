@@ -75,6 +75,7 @@ Each plugin or config feature is modularized:
 - telescope.lua → fuzzy finder config
 - treesitter.lua → syntax highlighting
 - web-dev-autotag.lua → HTML/JS auto-tagging support
+- colorizer.lua → A color-previewer for CSS-based coloring
 
 # Setup Instructions (Linux)
 
