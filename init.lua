@@ -104,3 +104,6 @@ end)
 
 -- setting a keymap for opening buffers using telescope
 vim.keymap.set("n", "<space>fb", "<cmd>Telescope buffers<CR>")
+
+-- requiring personal indentation parameters
+require("indent")
