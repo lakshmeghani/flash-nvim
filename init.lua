@@ -51,7 +51,8 @@ for i = 1, 9 do
   vim.keymap.set({ 'n', 't' }, '<A-k' .. i .. '>', function()
     local status, err = pcall(function() -- using this pcall function is like a try-catch block
       -- (if error of tab not existing, we sugar-coat it to not scream)
-      vim.cmd('tabnext ' .. i)
+      -- vim.cmd('tabnext ' .. i)
+      require("bufferline").go_to(i, true)
     end)
 
     if not status then
@@ -60,12 +61,14 @@ for i = 1, 9 do
   end, { desc = 'Go to tab ' .. i })
 end
 
+-- tweeking this to work with the bufferline plugin
 -- static moving between tabs in neovim using normal number keymaps
 for i = 1, 9 do
   vim.keymap.set({ 'n', 't' }, '<A-' .. i .. '>', function()
     local status, err = pcall(function()
-      vim.cmd('tabnext ' .. i)
-    end)
+      require("bufferline").go_to(i, true)
+      -- vim.cmd('tabnext ' .. i)
+    end, { noremap = true, silent = true })
 
     if not status then
       print("No tab open at - " .. i)
@@ -107,3 +110,6 @@ vim.keymap.set("n", "<space>fb", "<cmd>Telescope buffers<CR>")
 
 -- requiring personal indentation parameters
 require("indent")
+
+-- mapping for deleting a buffer
+vim.keymap.set("n", "bd", "<cmd>bd!<CR>", { noremap = true, silent = true })
